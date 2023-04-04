@@ -134,7 +134,8 @@ func dialogue(cmd *cobra.Command, args []string) {
 
 	completion, err := client.CreateCompletion(context.Background(), openai.CompletionRequest{
 		Prompt:    prompt,
-		MaxTokens: 1024,
+		Model:     "text-davinci-00",
+		MaxTokens: 5000,
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -158,7 +159,7 @@ func imageRecognition(cmd *cobra.Command, args []string) {
 
 	imageRecogRequest := openai.CompletionRequest{
 		Prompt:      fmt.Sprintf("描述这个图片: %s", imageBase64),
-		Model:       "davinci",
+		Model:       "image-alpha-001",
 		MaxTokens:   50,
 		Temperature: 0.5,
 		N:           1,
