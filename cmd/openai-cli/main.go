@@ -19,7 +19,7 @@ var openaiKey string
 
 func main() {
 	rootCmd := &cobra.Command{
-		Use:   "go-openai",
+		Use:   "openai-cli",
 		Short: "A command-line tool for OpenAI API",
 	}
 	dialogueCmd := &cobra.Command{
