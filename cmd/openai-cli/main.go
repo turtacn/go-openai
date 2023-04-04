@@ -135,7 +135,7 @@ func dialogue(cmd *cobra.Command, args []string) {
 	completion, err := client.CreateCompletion(context.Background(), openai.CompletionRequest{
 		Prompt:    prompt,
 		Model:     "text-davinci-003",
-		MaxTokens: 4097,
+		MaxTokens: 4096,
 	})
 	if err != nil {
 		log.Fatal(err)
