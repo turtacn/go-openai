@@ -20,10 +20,34 @@
 
 * Build
 ```text
-
+# go mod init github.com/turtacn/openai-cli 
+# go mod tidy
+go build -o openai-cli 
 ```
 
 * Run
 ```text
+$ ./openai-cli -h 
+A command-line tool for OpenAI API
+
+Usage:
+  go-openai [command]
+
+Available Commands:
+  audio-generation    Generate audio using OpenAI's Jukebox music model
+  audio-transcription Transcribe speech from an audio file using OpenAI's GPT-3 language model
+  code-generation     Generate code using OpenAI's Codex model
+  completion          Generate the autocompletion script for the specified shell
+  dialogue            Generate text using OpenAI's GPT-3 language model
+  help                Help about any command
+  image-editing       Edit an image using OpenAI's DALL-E image editing model
+  image-generation    Generate an image using OpenAI's DALL-E image generation model
+  image-recognition   Describe an image using OpenAI's DALL-E image recognition model
+
+Flags:
+  -h, --help         help for go-openai
+      --key string   OpenAI API key (can also be set using OPENAI_API_KEY environment variable)
+
+Use "go-openai [command] --help" for more information about a command.
 
 ```
