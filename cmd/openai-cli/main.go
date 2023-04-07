@@ -292,7 +292,7 @@ func codeGeneration(cmd *cobra.Command, args []string) {
 	result, err := client.CreateCompletion(context.Background(), openai.CompletionRequest{
 		Prompt:      prompt,
 		MaxTokens:   4000,
-		Model:       "davinci-codex",
+		Model:       "davinci",
 		N:           1,
 		Temperature: 0.5,
 	})
