@@ -291,7 +291,7 @@ func codeGeneration(cmd *cobra.Command, args []string) {
 
 	result, err := client.CreateCompletion(context.Background(), openai.CompletionRequest{
 		Prompt:      prompt,
-		MaxTokens:   4000,
+		MaxTokens:   2000,
 		Model:       "davinci",
 		N:           1,
 		Temperature: 0.5,
